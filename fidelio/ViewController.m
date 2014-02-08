@@ -15,6 +15,7 @@
 
 bool transmitting = false;
 bool listening = false;
+bool unlocked = false;
 
 @implementation ViewController
 
@@ -82,6 +83,7 @@ bool listening = false;
     CLBeacon *beacon = [[CLBeacon alloc] init];
     beacon = [beacons lastObject];
     self.rssiLabel.text = [NSString stringWithFormat:@"%li", (long)beacon.rssi];
+    [self handleRSSI:beacon.rssi];
 }
 
 
@@ -115,6 +117,31 @@ bool listening = false;
     }
     
     transmitting = !transmitting;
+}
+
+-(void)handleRSSI:(NSInteger) rssi{
+    if (rssi > -60 && rssi != 0 && !unlocked){
+        [PFCloud callFunctionInBackground:@"unlockLaptop"
+                           withParameters:@{}
+                                    block:^(NSString *result, NSError *error) {
+                                        if (!error){
+                                            NSLog(@"Laptop should be unlocked");
+                                        }
+                                    }];
+         unlocked = true;
+    }
+    else if (unlocked){
+        [PFCloud callFunctionInBackground:@"lockLaptop"
+                           withParameters:@{}
+                                    block:^(NSString *result, NSError *error) {
+                                        if (!error){
+                                            NSLog(@"Laptop should be locked");
+                                        }
+                                    }];
+        unlocked = false;
+        
+    }
+    
 }
 
 

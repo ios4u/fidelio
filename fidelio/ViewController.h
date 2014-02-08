@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 #import <CoreBluetooth/CoreBluetooth.h>
 #import <CoreLocation/CoreLocation.h>
+#import <Parse/Parse.h>
 
 @interface ViewController : UIViewController <CBPeripheralManagerDelegate, CLLocationManagerDelegate>
 @property (weak, nonatomic) IBOutlet UIButton *transmitButton;
