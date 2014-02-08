@@ -120,24 +120,33 @@ bool unlocked = false;
 }
 
 -(void)handleRSSI:(NSInteger) rssi{
-    if (rssi > -60 && rssi != 0 && !unlocked){
-        [PFCloud callFunctionInBackground:@"unlockLaptop"
-                           withParameters:@{}
-                                    block:^(NSString *result, NSError *error) {
-                                        if (!error){
-                                            NSLog(@"Laptop should be unlocked");
-                                        }
-                                    }];
-         unlocked = true;
+    if (rssi > -55 && rssi != 0 && !unlocked){
+        NSLog(@"Making cloud call");
+        
+        PFQuery *query = [PFQuery queryWithClassName:@"unlock"];
+        [query whereKey:@"Compooter" equalTo:@"dukakis" ];
+        [query getFirstObjectInBackgroundWithBlock:^(PFObject *object, NSError *error) {
+            if (!error){
+                object[@"nearby"] = @YES;
+                [object saveInBackground];
+            }
+            
+        }];
+        unlocked = true;
     }
-    else if (unlocked){
-        [PFCloud callFunctionInBackground:@"lockLaptop"
-                           withParameters:@{}
-                                    block:^(NSString *result, NSError *error) {
-                                        if (!error){
-                                            NSLog(@"Laptop should be locked");
-                                        }
-                                    }];
+    else if (unlocked && (rssi == 0 || rssi < -65)){
+        NSLog(@"Making cloud call2");
+        
+        PFQuery *query = [PFQuery queryWithClassName:@"unlock"];
+        [query whereKey:@"Compooter" equalTo:@"dukakis" ];
+        [query getFirstObjectInBackgroundWithBlock:^(PFObject *object, NSError *error) {
+            if (!error){
+                object[@"nearby"] = @NO;
+                [object saveInBackground];
+            }
+            
+        }];
+
         unlocked = false;
         
     }
