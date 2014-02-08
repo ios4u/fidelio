@@ -66,11 +66,17 @@ bool transmitting = false;
 
 - (IBAction)transmitButton:(id)sender {
     if (transmitting) {
-        NSLog(@"Button pressed");
+        NSLog(@"Stopping transmission");
+        [self.peripheralManager stopAdvertising];
+        [self.transmitButton setTitle:@"Transmit unlock request" forState:UIControlStateNormal];
+        transmitting = !transmitting;
+    }
+    else {
+        NSLog(@"Starting transmission");
         self.beaconPeripheralData = [self.beaconRegion peripheralDataWithMeasuredPower:nil];
         self.peripheralManager = [[CBPeripheralManager alloc] initWithDelegate:self queue:nil options:@{CBCentralManagerOptionShowPowerAlertKey:[NSNumber numberWithBool:YES]}];
-
         [self.transmitButton setTitle:@"Stop Transmission" forState:UIControlStateNormal];
+        transmitting = !transmitting;
     }
 }
 
