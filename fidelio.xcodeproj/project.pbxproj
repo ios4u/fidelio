@@ -1,0 +1,475 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		B736C8D218A609B9001D44FB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B736C8D118A609B9001D44FB /* Foundation.framework */; };
+		B736C8D418A609B9001D44FB /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B736C8D318A609B9001D44FB /* CoreGraphics.framework */; };
+		B736C8D618A609B9001D44FB /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B736C8D518A609B9001D44FB /* UIKit.framework */; };
+		B736C8DC18A609B9001D44FB /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = B736C8DA18A609B9001D44FB /* InfoPlist.strings */; };
+		B736C8DE18A609B9001D44FB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B736C8DD18A609B9001D44FB /* main.m */; };
+		B736C8E218A609B9001D44FB /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B736C8E118A609B9001D44FB /* AppDelegate.m */; };
+		B736C8E518A609B9001D44FB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B736C8E318A609B9001D44FB /* Main.storyboard */; };
+		B736C8E818A609B9001D44FB /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B736C8E718A609B9001D44FB /* ViewController.m */; };
+		B736C8EA18A609B9001D44FB /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B736C8E918A609B9001D44FB /* Images.xcassets */; };
+		B736C8F118A609B9001D44FB /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B736C8F018A609B9001D44FB /* XCTest.framework */; };
+		B736C8F218A609B9001D44FB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B736C8D118A609B9001D44FB /* Foundation.framework */; };
+		B736C8F318A609B9001D44FB /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B736C8D518A609B9001D44FB /* UIKit.framework */; };
+		B736C8FB18A609BA001D44FB /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = B736C8F918A609BA001D44FB /* InfoPlist.strings */; };
+		B736C8FD18A609BA001D44FB /* fidelioTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B736C8FC18A609BA001D44FB /* fidelioTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		B736C8F418A609B9001D44FB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B736C8C618A609B9001D44FB /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B736C8CD18A609B9001D44FB;
+			remoteInfo = fidelio;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		B736C8CE18A609B9001D44FB /* fidelio.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = fidelio.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B736C8D118A609B9001D44FB /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		B736C8D318A609B9001D44FB /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		B736C8D518A609B9001D44FB /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		B736C8D918A609B9001D44FB /* fidelio-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "fidelio-Info.plist"; sourceTree = "<group>"; };
+		B736C8DB18A609B9001D44FB /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		B736C8DD18A609B9001D44FB /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		B736C8DF18A609B9001D44FB /* fidelio-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "fidelio-Prefix.pch"; sourceTree = "<group>"; };
+		B736C8E018A609B9001D44FB /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		B736C8E118A609B9001D44FB /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		B736C8E418A609B9001D44FB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		B736C8E618A609B9001D44FB /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		B736C8E718A609B9001D44FB /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		B736C8E918A609B9001D44FB /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		B736C8EF18A609B9001D44FB /* fidelioTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = fidelioTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		B736C8F018A609B9001D44FB /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		B736C8F818A609BA001D44FB /* fidelioTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "fidelioTests-Info.plist"; sourceTree = "<group>"; };
+		B736C8FA18A609BA001D44FB /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		B736C8FC18A609BA001D44FB /* fidelioTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = fidelioTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		B736C8CB18A609B9001D44FB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B736C8D418A609B9001D44FB /* CoreGraphics.framework in Frameworks */,
+				B736C8D618A609B9001D44FB /* UIKit.framework in Frameworks */,
+				B736C8D218A609B9001D44FB /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B736C8EC18A609B9001D44FB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B736C8F118A609B9001D44FB /* XCTest.framework in Frameworks */,
+				B736C8F318A609B9001D44FB /* UIKit.framework in Frameworks */,
+				B736C8F218A609B9001D44FB /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		B736C8C518A609B9001D44FB = {
+			isa = PBXGroup;
+			children = (
+				B736C8D718A609B9001D44FB /* fidelio */,
+				B736C8F618A609B9001D44FB /* fidelioTests */,
+				B736C8D018A609B9001D44FB /* Frameworks */,
+				B736C8CF18A609B9001D44FB /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		B736C8CF18A609B9001D44FB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B736C8CE18A609B9001D44FB /* fidelio.app */,
+				B736C8EF18A609B9001D44FB /* fidelioTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B736C8D018A609B9001D44FB /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B736C8D118A609B9001D44FB /* Foundation.framework */,
+				B736C8D318A609B9001D44FB /* CoreGraphics.framework */,
+				B736C8D518A609B9001D44FB /* UIKit.framework */,
+				B736C8F018A609B9001D44FB /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B736C8D718A609B9001D44FB /* fidelio */ = {
+			isa = PBXGroup;
+			children = (
+				B736C8E018A609B9001D44FB /* AppDelegate.h */,
+				B736C8E118A609B9001D44FB /* AppDelegate.m */,
+				B736C8E318A609B9001D44FB /* Main.storyboard */,
+				B736C8E618A609B9001D44FB /* ViewController.h */,
+				B736C8E718A609B9001D44FB /* ViewController.m */,
+				B736C8E918A609B9001D44FB /* Images.xcassets */,
+				B736C8D818A609B9001D44FB /* Supporting Files */,
+			);
+			path = fidelio;
+			sourceTree = "<group>";
+		};
+		B736C8D818A609B9001D44FB /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				B736C8D918A609B9001D44FB /* fidelio-Info.plist */,
+				B736C8DA18A609B9001D44FB /* InfoPlist.strings */,
+				B736C8DD18A609B9001D44FB /* main.m */,
+				B736C8DF18A609B9001D44FB /* fidelio-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		B736C8F618A609B9001D44FB /* fidelioTests */ = {
+			isa = PBXGroup;
+			children = (
+				B736C8FC18A609BA001D44FB /* fidelioTests.m */,
+				B736C8F718A609B9001D44FB /* Supporting Files */,
+			);
+			path = fidelioTests;
+			sourceTree = "<group>";
+		};
+		B736C8F718A609B9001D44FB /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				B736C8F818A609BA001D44FB /* fidelioTests-Info.plist */,
+				B736C8F918A609BA001D44FB /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		B736C8CD18A609B9001D44FB /* fidelio */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B736C90018A609BA001D44FB /* Build configuration list for PBXNativeTarget "fidelio" */;
+			buildPhases = (
+				B736C8CA18A609B9001D44FB /* Sources */,
+				B736C8CB18A609B9001D44FB /* Frameworks */,
+				B736C8CC18A609B9001D44FB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = fidelio;
+			productName = fidelio;
+			productReference = B736C8CE18A609B9001D44FB /* fidelio.app */;
+			productType = "com.apple.product-type.application";
+		};
+		B736C8EE18A609B9001D44FB /* fidelioTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B736C90318A609BA001D44FB /* Build configuration list for PBXNativeTarget "fidelioTests" */;
+			buildPhases = (
+				B736C8EB18A609B9001D44FB /* Sources */,
+				B736C8EC18A609B9001D44FB /* Frameworks */,
+				B736C8ED18A609B9001D44FB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B736C8F518A609B9001D44FB /* PBXTargetDependency */,
+			);
+			name = fidelioTests;
+			productName = fidelioTests;
+			productReference = B736C8EF18A609B9001D44FB /* fidelioTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		B736C8C618A609B9001D44FB /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0500;
+				ORGANIZATIONNAME = "Michael Pfister";
+				TargetAttributes = {
+					B736C8EE18A609B9001D44FB = {
+						TestTargetID = B736C8CD18A609B9001D44FB;
+					};
+				};
+			};
+			buildConfigurationList = B736C8C918A609B9001D44FB /* Build configuration list for PBXProject "fidelio" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = B736C8C518A609B9001D44FB;
+			productRefGroup = B736C8CF18A609B9001D44FB /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				B736C8CD18A609B9001D44FB /* fidelio */,
+				B736C8EE18A609B9001D44FB /* fidelioTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		B736C8CC18A609B9001D44FB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B736C8EA18A609B9001D44FB /* Images.xcassets in Resources */,
+				B736C8DC18A609B9001D44FB /* InfoPlist.strings in Resources */,
+				B736C8E518A609B9001D44FB /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B736C8ED18A609B9001D44FB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B736C8FB18A609BA001D44FB /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		B736C8CA18A609B9001D44FB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B736C8E818A609B9001D44FB /* ViewController.m in Sources */,
+				B736C8E218A609B9001D44FB /* AppDelegate.m in Sources */,
+				B736C8DE18A609B9001D44FB /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B736C8EB18A609B9001D44FB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B736C8FD18A609BA001D44FB /* fidelioTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		B736C8F518A609B9001D44FB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B736C8CD18A609B9001D44FB /* fidelio */;
+			targetProxy = B736C8F418A609B9001D44FB /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		B736C8DA18A609B9001D44FB /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B736C8DB18A609B9001D44FB /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		B736C8E318A609B9001D44FB /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B736C8E418A609B9001D44FB /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		B736C8F918A609BA001D44FB /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B736C8FA18A609BA001D44FB /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		B736C8FE18A609BA001D44FB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		B736C8FF18A609BA001D44FB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		B736C90118A609BA001D44FB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "fidelio/fidelio-Prefix.pch";
+				INFOPLIST_FILE = "fidelio/fidelio-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		B736C90218A609BA001D44FB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "fidelio/fidelio-Prefix.pch";
+				INFOPLIST_FILE = "fidelio/fidelio-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		B736C90418A609BA001D44FB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/fidelio.app/fidelio";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "fidelio/fidelio-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "fidelioTests/fidelioTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		B736C90518A609BA001D44FB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/fidelio.app/fidelio";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "fidelio/fidelio-Prefix.pch";
+				INFOPLIST_FILE = "fidelioTests/fidelioTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		B736C8C918A609B9001D44FB /* Build configuration list for PBXProject "fidelio" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B736C8FE18A609BA001D44FB /* Debug */,
+				B736C8FF18A609BA001D44FB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B736C90018A609BA001D44FB /* Build configuration list for PBXNativeTarget "fidelio" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B736C90118A609BA001D44FB /* Debug */,
+				B736C90218A609BA001D44FB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		B736C90318A609BA001D44FB /* Build configuration list for PBXNativeTarget "fidelioTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B736C90418A609BA001D44FB /* Debug */,
+				B736C90518A609BA001D44FB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = B736C8C618A609B9001D44FB /* Project object */;
+}
