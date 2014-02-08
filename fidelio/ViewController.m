@@ -4,6 +4,7 @@
 //
 //  Created by Michael Pfister on 2/8/14.
 //  Copyright (c) 2014 Michael Pfister. All rights reserved.
+//  Code adapted from tutorial at http://www.devfright.com/ibeacons-tutorial-ios-7-clbeaconregion-clbeacon/
 //
 
 #import "ViewController.h"
@@ -13,6 +14,7 @@
 @end
 
 bool transmitting = false;
+bool listening = false;
 
 @implementation ViewController
 
@@ -23,12 +25,27 @@ bool transmitting = false;
     
     // init beacon
     [self initBeacon];
+    // update the labels
     [self.uuidLabel setText:self.beaconRegion.proximityUUID.UUIDString];
     [self.majorLabel setText:[NSString stringWithFormat:@"%@", self.beaconRegion.major]];
     [self.minorLabel setText:[NSString stringWithFormat:@"%@", self.beaconRegion.minor]];
     [self.identityLabel setText:self.beaconRegion.identifier];
+    [self.rssiLabel setText:0];
     
-    // update the labels
+    // Set up receiving stuff
+    self.locationManager = [[CLLocationManager alloc] init];
+    self.locationManager.delegate = self;
+    [self initRegion];
+    
+    
+    // Temporarily hack due to laziness (I don't want to walk 20ft)
+    [self locationManager:self.locationManager didStartMonitoringForRegion:self.beaconRegion];
+    
+    
+}
+
+- (void)locationManager:(CLLocationManager *)manager didStartMonitoringForRegion:(CLRegion *)region {
+    [self.locationManager startRangingBeaconsInRegion:self.beaconRegion];
 }
 
 - (void)didReceiveMemoryWarning
@@ -42,12 +59,31 @@ bool transmitting = false;
     NSUUID *uuid = [[NSUUID alloc] initWithUUIDString:@"3B5B69EC-0D4A-4B0D-8A9C-D9073B0CB062"]; // generated with uuidgen
     
     // TODO don't hardcode the major minor etc?
-    self.beaconRegion = [[CLBeaconRegion alloc] initWithProximityUUID:uuid
-                                                                major:1
-                                                                minor:1
-                                                           identifier:@"io.pfista.fidelio"];
+    self.beaconRegion = [[CLBeaconRegion alloc] initWithProximityUUID:uuid major:1 minor:1 identifier:@"io.pfista.fidelio"];
     
 }
+
+- (void)initRegion {
+    NSUUID *uuid = [[NSUUID alloc] initWithUUIDString:@"3B5B69EC-0D4A-4B0D-8A9C-D9073B0CB062"];
+    self.beaconRegion = [[CLBeaconRegion alloc] initWithProximityUUID:uuid identifier:@"io.pfista.fidelio"];
+    [self.locationManager startMonitoringForRegion:self.beaconRegion];
+}
+
+- (void)locationManager:(CLLocationManager *)manager didEnterRegion:(CLRegion *)region {
+    [self.locationManager startRangingBeaconsInRegion:self.beaconRegion];
+}
+
+-(void)locationManager:(CLLocationManager *)manager didExitRegion:(CLRegion *)region {
+    [self.locationManager stopRangingBeaconsInRegion:self.beaconRegion];
+    
+}
+
+-(void)locationManager:(CLLocationManager *)manager didRangeBeacons:(NSArray *)beacons inRegion:(CLBeaconRegion *)region {
+    CLBeacon *beacon = [[CLBeacon alloc] init];
+    beacon = [beacons lastObject];
+    self.rssiLabel.text = [NSString stringWithFormat:@"%li", (long)beacon.rssi];
+}
+
 
 -(void) peripheralManagerDidUpdateState:(CBPeripheralManager *)peripheral {
     if (peripheral.state == CBPeripheralManagerStatePoweredOn) {
@@ -57,7 +93,6 @@ bool transmitting = false;
         [self.transmitButton setTitle:@"Stop Transmission" forState:UIControlStateNormal];
         
     } else if (peripheral.state == CBPeripheralManagerStatePoweredOff) {
-        // TODO: ask user to turn bluetooth on
         NSLog(@"Powered Off");
         [self.peripheralManager stopAdvertising];
         [self.transmitButton setTitle:@"Transmit unlock request" forState:UIControlStateNormal];
@@ -69,15 +104,19 @@ bool transmitting = false;
         NSLog(@"Stopping transmission");
         [self.peripheralManager stopAdvertising];
         [self.transmitButton setTitle:@"Transmit unlock request" forState:UIControlStateNormal];
-        transmitting = !transmitting;
-    }
-    else {
+        
+    } else {
         NSLog(@"Starting transmission");
         self.beaconPeripheralData = [self.beaconRegion peripheralDataWithMeasuredPower:nil];
         self.peripheralManager = [[CBPeripheralManager alloc] initWithDelegate:self queue:nil options:@{CBCentralManagerOptionShowPowerAlertKey:[NSNumber numberWithBool:YES]}];
+        // TODO only change title if we know for sure it was enabled in settings...
         [self.transmitButton setTitle:@"Stop Transmission" forState:UIControlStateNormal];
-        transmitting = !transmitting;
+
     }
+    
+    transmitting = !transmitting;
 }
+
+
 
 @end

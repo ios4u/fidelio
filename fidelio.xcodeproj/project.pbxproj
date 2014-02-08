@@ -23,6 +23,15 @@
 		B736C8FD18A609BA001D44FB /* fidelioTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B736C8FC18A609BA001D44FB /* fidelioTests.m */; };
 		B736C90718A60CC3001D44FB /* CoreBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B736C90618A60CC3001D44FB /* CoreBluetooth.framework */; };
 		B736C90918A60CCA001D44FB /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B736C90818A60CCA001D44FB /* CoreLocation.framework */; };
+		B736C90B18A61E3C001D44FB /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B736C90A18A61E3C001D44FB /* Parse.framework */; };
+		B736C90D18A61E70001D44FB /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B736C90C18A61E70001D44FB /* AudioToolbox.framework */; };
+		B736C90F18A61E75001D44FB /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B736C90E18A61E75001D44FB /* CFNetwork.framework */; };
+		B736C91118A61E82001D44FB /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = B736C91018A61E82001D44FB /* libz.dylib */; };
+		B736C91318A61E89001D44FB /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B736C91218A61E89001D44FB /* MobileCoreServices.framework */; };
+		B736C91518A61E92001D44FB /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B736C91418A61E92001D44FB /* QuartzCore.framework */; };
+		B736C91718A61E9A001D44FB /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B736C91618A61E9A001D44FB /* Security.framework */; };
+		B736C91918A61E9F001D44FB /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B736C91818A61E9F001D44FB /* StoreKit.framework */; };
+		B736C91B18A61EA7001D44FB /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B736C91A18A61EA7001D44FB /* SystemConfiguration.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +66,15 @@
 		B736C8FC18A609BA001D44FB /* fidelioTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = fidelioTests.m; sourceTree = "<group>"; };
 		B736C90618A60CC3001D44FB /* CoreBluetooth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreBluetooth.framework; path = System/Library/Frameworks/CoreBluetooth.framework; sourceTree = SDKROOT; };
 		B736C90818A60CCA001D44FB /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		B736C90A18A61E3C001D44FB /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
+		B736C90C18A61E70001D44FB /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		B736C90E18A61E75001D44FB /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		B736C91018A61E82001D44FB /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
+		B736C91218A61E89001D44FB /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		B736C91418A61E92001D44FB /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		B736C91618A61E9A001D44FB /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		B736C91818A61E9F001D44FB /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		B736C91A18A61EA7001D44FB /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,10 +82,19 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B736C91B18A61EA7001D44FB /* SystemConfiguration.framework in Frameworks */,
+				B736C91918A61E9F001D44FB /* StoreKit.framework in Frameworks */,
+				B736C91718A61E9A001D44FB /* Security.framework in Frameworks */,
+				B736C91518A61E92001D44FB /* QuartzCore.framework in Frameworks */,
+				B736C91318A61E89001D44FB /* MobileCoreServices.framework in Frameworks */,
+				B736C91118A61E82001D44FB /* libz.dylib in Frameworks */,
+				B736C8D418A609B9001D44FB /* CoreGraphics.framework in Frameworks */,
+				B736C90F18A61E75001D44FB /* CFNetwork.framework in Frameworks */,
+				B736C90D18A61E70001D44FB /* AudioToolbox.framework in Frameworks */,
 				B736C90918A60CCA001D44FB /* CoreLocation.framework in Frameworks */,
 				B736C90718A60CC3001D44FB /* CoreBluetooth.framework in Frameworks */,
-				B736C8D418A609B9001D44FB /* CoreGraphics.framework in Frameworks */,
 				B736C8D618A609B9001D44FB /* UIKit.framework in Frameworks */,
+				B736C90B18A61E3C001D44FB /* Parse.framework in Frameworks */,
 				B736C8D218A609B9001D44FB /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -88,6 +115,7 @@
 		B736C8C518A609B9001D44FB = {
 			isa = PBXGroup;
 			children = (
+				B736C90A18A61E3C001D44FB /* Parse.framework */,
 				B736C8D718A609B9001D44FB /* fidelio */,
 				B736C8F618A609B9001D44FB /* fidelioTests */,
 				B736C8D018A609B9001D44FB /* Frameworks */,
@@ -107,6 +135,14 @@
 		B736C8D018A609B9001D44FB /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				B736C91A18A61EA7001D44FB /* SystemConfiguration.framework */,
+				B736C91818A61E9F001D44FB /* StoreKit.framework */,
+				B736C91618A61E9A001D44FB /* Security.framework */,
+				B736C91418A61E92001D44FB /* QuartzCore.framework */,
+				B736C91218A61E89001D44FB /* MobileCoreServices.framework */,
+				B736C91018A61E82001D44FB /* libz.dylib */,
+				B736C90E18A61E75001D44FB /* CFNetwork.framework */,
+				B736C90C18A61E70001D44FB /* AudioToolbox.framework */,
 				B736C90818A60CCA001D44FB /* CoreLocation.framework */,
 				B736C90618A60CC3001D44FB /* CoreBluetooth.framework */,
 				B736C8D118A609B9001D44FB /* Foundation.framework */,
@@ -329,7 +365,8 @@
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "Apple Development IOS Push Services: io.pfista.fidelio";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "Apple Development IOS Push Services: io.pfista.fidelio";
 				COPY_PHASE_STRIP = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
@@ -368,7 +405,8 @@
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "Apple Development IOS Push Services: io.pfista.fidelio";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "Apple Development IOS Push Services: io.pfista.fidelio";
 				COPY_PHASE_STRIP = YES;
 				ENABLE_NS_ASSERTIONS = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -389,13 +427,17 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "Apple Development IOS Push Services: io.pfista.fidelio";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "Apple Development IOS Push Services: io.pfista.fidelio";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"/Users/pfista/IOS\\ Development/fidelio",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "fidelio/fidelio-Prefix.pch";
 				INFOPLIST_FILE = "fidelio/fidelio-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "3E5772BA-5BD6-4886-B521-D9551840758A";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -405,13 +447,17 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "Apple Development IOS Push Services: io.pfista.fidelio";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "Apple Development IOS Push Services: io.pfista.fidelio";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"/Users/pfista/IOS\\ Development/fidelio",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "fidelio/fidelio-Prefix.pch";
 				INFOPLIST_FILE = "fidelio/fidelio-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "3E5772BA-5BD6-4886-B521-D9551840758A";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
