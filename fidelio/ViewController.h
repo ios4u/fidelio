@@ -6,9 +6,9 @@
 //  Copyright (c) 2014 Michael Pfister. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
-#import <CoreBluetooth/CoreBluetooth.h>
-#import <CoreLocation/CoreLocation.h>
+@import UIKit;
+@import CoreBluetooth;
+@import CoreLocation;
 #import <Parse/Parse.h>
 
 @interface ViewController : UIViewController <CBPeripheralManagerDelegate, CLLocationManagerDelegate>

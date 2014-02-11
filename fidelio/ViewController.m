@@ -90,7 +90,7 @@
 -(void) peripheralManagerDidUpdateState:(CBPeripheralManager *)peripheral {
     if (peripheral.state == CBPeripheralManagerStatePoweredOn) {
         NSLog(@"Powered on ");
-        [self setTransmitting:true];
+        self.transmitting = true;
         [self.peripheralManager startAdvertising:self.beaconPeripheralData];
         [self.transmitButton setTitle:@"Stop Transmission" forState:UIControlStateNormal];
         
@@ -115,7 +115,7 @@
         [self.transmitButton setTitle:@"Stop Transmission" forState:UIControlStateNormal];
 
     }
-    [self setTransmitting:![self isTransmitting]];
+    self.transmitting = !self.transmitting;
 
 }
 
@@ -125,14 +125,14 @@
         
         PFQuery *query = [PFQuery queryWithClassName:@"unlock"];
         [query whereKey:@"Compooter" equalTo:@"dukakis" ];
-        [[query getFirstObjectInBackgroundWithBlock:^(PFObject *object, NSError *error) {
+        [query getFirstObjectInBackgroundWithBlock:^(PFObject *object, NSError *error) {
             if (!error){
                 object[@"nearby"] = @YES;
                 [object saveInBackground];
             }
             
-        }]];
-        [self setUnlocked:true];
+        }];
+        self.unlocked = true;
 
     }
     else if ([self isUnlocked] && (rssi == 0 || rssi < -65)){
@@ -147,7 +147,7 @@
             }
             
         }];
-        [self setUnlocked:false];
+        self.unlocked = false;
     }
     
 }
