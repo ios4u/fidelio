@@ -11,11 +11,11 @@
 
 @interface ViewController ()
 
-@end
+@property (nonatomic, getter=isTransmitting) BOOL transmitting;
+@property (nonatomic, getter=isListening) BOOL listening;
+@property (nonatomic, getter=isUnlocked) BOOL unlocked;
 
-bool transmitting = false;
-bool listening = false;
-bool unlocked = false;
+@end
 
 @implementation ViewController
 
@@ -90,7 +90,7 @@ bool unlocked = false;
 -(void) peripheralManagerDidUpdateState:(CBPeripheralManager *)peripheral {
     if (peripheral.state == CBPeripheralManagerStatePoweredOn) {
         NSLog(@"Powered on ");
-        transmitting = true;
+        [self setTransmitting:true];
         [self.peripheralManager startAdvertising:self.beaconPeripheralData];
         [self.transmitButton setTitle:@"Stop Transmission" forState:UIControlStateNormal];
         
@@ -102,7 +102,7 @@ bool unlocked = false;
 }
 
 - (IBAction)transmitButton:(id)sender {
-    if (transmitting) {
+    if ([self isTransmitting]) {
         NSLog(@"Stopping transmission");
         [self.peripheralManager stopAdvertising];
         [self.transmitButton setTitle:@"Transmit unlock request" forState:UIControlStateNormal];
@@ -115,26 +115,27 @@ bool unlocked = false;
         [self.transmitButton setTitle:@"Stop Transmission" forState:UIControlStateNormal];
 
     }
-    
-    transmitting = !transmitting;
+    [self setTransmitting:![self isTransmitting]];
+
 }
 
 -(void)handleRSSI:(NSInteger) rssi{
-    if (rssi > -55 && rssi != 0 && !unlocked){
+    if (rssi > -55 && rssi != 0 && ![self isUnlocked]){
         NSLog(@"Making cloud call");
         
         PFQuery *query = [PFQuery queryWithClassName:@"unlock"];
         [query whereKey:@"Compooter" equalTo:@"dukakis" ];
-        [query getFirstObjectInBackgroundWithBlock:^(PFObject *object, NSError *error) {
+        [[query getFirstObjectInBackgroundWithBlock:^(PFObject *object, NSError *error) {
             if (!error){
                 object[@"nearby"] = @YES;
                 [object saveInBackground];
             }
             
-        }];
-        unlocked = true;
+        }]];
+        [self setUnlocked:true];
+
     }
-    else if (unlocked && (rssi == 0 || rssi < -65)){
+    else if ([self isUnlocked] && (rssi == 0 || rssi < -65)){
         NSLog(@"Making cloud call2");
         
         PFQuery *query = [PFQuery queryWithClassName:@"unlock"];
@@ -146,9 +147,7 @@ bool unlocked = false;
             }
             
         }];
-
-        unlocked = false;
-        
+        [self setUnlocked:false];
     }
     
 }
